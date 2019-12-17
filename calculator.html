@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<title>Kalkulator sredjeni</title>
+	
+		<style>
+	
+		table td {
+			border: 1px solid lightblue;
+			background-color:skyblue;
+		}
+		
+		.tekst {
+			background-color:lightsteelblue;
+			text-align: right;
+		}
+		
+		#prvo, #drugo, #rezultat {
+			padding-left: 10px;
+			font-weight: bold;
+		}
+		
+		table [type="text"] {
+			background-color:beige;
+		}
+		
+		table [type="button"] {
+			border-radius: 4px;
+		}
+		
+		table [type="button"]:hover {
+			background-color:silver;
+			font-weight: bold;
+		}
+		
+		</style>
+		
+		<script>
+			var a; b;
+			function saberi() {
+				a = parseInt (document.getElementById("prvo").value);
+				b = parseInt (document.getElementById("drugo").value);
+				document.getElementById("rezultat").value = a + b;
+			}
+			function oduzmi() {
+				a = parseInt (document.getElementById("prvo").value);
+				b = parseInt (document.getElementById("drugo").value);
+				document.getElementById("rezultat").value = a - b;
+			}
+			function podeli() {
+				a = parseInt (document.getElementById("prvo").value);
+				b = parseInt (document.getElementById("drugo").value);
+				document.getElementById("rezultat").value = a / b;
+			}
+			function pomnozi() {
+				a = parseInt (document.getElementById("prvo").value);
+				b = parseInt (document.getElementById("drugo").value);
+				document.getElementById("rezultat").value = a * b;
+			}
+			function kvkoren() {
+				a = parseInt (document.getElementById("prvo").value);
+				document.getElementById("rezultat").value = Math.sqrt(a);
+			}
+			function obrisisve() {
+				document.getElementById("prvo").value = "";
+				document.getElementById("drugo").value = "";
+				document.getElementById("rezultat").value = "";
+			}
+		</script>
+		
+	</head>
+
+	<body>
+		<table>
+	      <tr>
+		    <td class="tekst" colspan="2">Prvi broj:</td>
+		    <td colspan="4"><input type="text" ID="prvo" /></td>
+		  </tr>
+		  <tr>
+		    <td class="tekst" colspan="2">Drugi broj:</td>
+		    <td colspan="4"><input type="text" ID="drugo" /></td>
+		  </tr>
+		  <tr>
+		    <td><input type="button" value="  +  " onClick="saberi()" /></td>
+		    <td><input type="button" value="  -  " onClick="oduzmi()" /></td>
+		    <td><input type="button" value="  /  " onClick="podeli()" /></td>
+		    <td><input type="button" value="  *  " onClick="pomnozi()" /></td>
+		    <td><input type="button" value=" sqrt " onClick="kvkoren()" /></td>
+		    <td><input type="button" value="  C  " onClick="obrisisve()" /></td>   
+		  </tr>
+		  <tr>
+		    <td class="tekst" colspan="2">Rezultat:</td>
+		    <td colspan="4"><input type="text" ID="rezultat" /></td>
+		  </tr>
+		</table>
+	</body>
+
+</html>
