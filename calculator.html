@@ -4,40 +4,6 @@
 		<meta charset="UTF-8"/>
 		<title>Kalkulator sređeni</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
-
-		<script>
-			var a; b;
-			function saberi() {
-				a = parseInt (document.getElementById("prvo").value);
-				b = parseInt (document.getElementById("drugo").value);
-				document.getElementById("rezultat").value = a + b;
-			}
-			function oduzmi() {
-				a = parseInt (document.getElementById("prvo").value);
-				b = parseInt (document.getElementById("drugo").value);
-				document.getElementById("rezultat").value = a - b;
-			}
-			function podeli() {
-				a = parseInt (document.getElementById("prvo").value);
-				b = parseInt (document.getElementById("drugo").value);
-				document.getElementById("rezultat").value = a / b;
-			}
-			function pomnozi() {
-				a = parseInt (document.getElementById("prvo").value);
-				b = parseInt (document.getElementById("drugo").value);
-				document.getElementById("rezultat").value = a * b;
-			}
-			function kvkoren() {
-				a = parseInt (document.getElementById("prvo").value);
-				document.getElementById("rezultat").value = Math.sqrt(a);
-			}
-			function obrisisve() {
-				document.getElementById("prvo").value = "";
-				document.getElementById("drugo").value = "";
-				document.getElementById("rezultat").value = "";
-			}
-		</script>
-		
 	</head>
 
 	<body>
@@ -63,6 +29,7 @@
 		    <td colspan="4"><input type="text" ID="rezultat" /></td>
 		  </tr>
 		</table>
+	<script type="text/javascript" src="scriptum.js"></script>
 	</body>
 
 </html>
